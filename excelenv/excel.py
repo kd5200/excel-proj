@@ -24,13 +24,14 @@ print('Initial colmns in second sheet:', df2.columns.tolist())
 
 
 # Specify the columns to be deleted from the first sheet
+# Set time aside to see which columns aren't needed on the dcm export excel sheet
 
+columns_to_remove = ['columns to be deleted']
 
 
 
 # Remove the specified columns from the first sheet
-
-
+df1 = df1.drop(columns=columns_to_remove)
 
 # Display the columns after removal
 
