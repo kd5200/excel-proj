@@ -34,16 +34,16 @@ columns_to_remove = ['columns to be deleted']
 df1 = df1.drop(columns=columns_to_remove)
 
 # Display the columns after removal
+print('columns after removal in new sheet:', df1.columns.tolist())
 
 
-
-# Identify common columns
-
-
+# Identify common columns (why do I need this?)
+common_columns = df1.columns.intersection(df2.columns)
 
 
 # Filter the DataFrames to include only the common columns
-
+df1_filtered = df1[common_columns]
+df1_filtered = df2[common_columns]
 
 
 # Display the common columns
