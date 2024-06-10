@@ -8,11 +8,28 @@ file_2 = 'file-path-of-dcm-export'
 
 
 
+# Map columns to each other so theres no need to rename columns
+column_mapping = {
+
+    'Site' : 'Site Name',
+    'DCM Placement ID' : 'Placement ID',
+    'DCM Placement Name' : 'Placement Name',
+    'Placement Start Date' : 'Start Date',
+    'Placement End Date' : 'End Date',
+    'Size' : 'Dimensions',
+    'Ad Server' : 'Ad Type',
+    'Click-through URL' : 'Creative Click-Through URL'
+
+
+}
+
+
 
 
 # Read the sheets into DataFrames
 df1 = pd.read_excel(file_1, sheet_name='Sheet1')
 df2 = pd.read_excel(file_2, sheet_name='Sheet2')
+
 
 
 
@@ -25,7 +42,6 @@ print('Initial colmns in second sheet:', df2.columns.tolist())
 
 # Specify the columns to be deleted from the first sheet
 # Set time aside to see which columns aren't needed on the dcm export excel sheet
-
 columns_to_remove = ['columns to be deleted']
 
 
@@ -35,6 +51,10 @@ df1 = df1.drop(columns=columns_to_remove)
 
 # Display the columns after removal
 print('columns after removal in new sheet:', df1.columns.tolist())
+
+# Map columns to match naming convention 
+df2_mapped = df2.rename(columns=column_mapping)
+
 
 
 # Identify common columns (why do I need this?)
