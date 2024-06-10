@@ -60,4 +60,9 @@ df_differences = pd.DataFrame(np.where(comparison_values, np.nan, 'Difference'),
 
 
 # Save the differences to a new Excel file
+with pd.ExcelWriter('QA.xlsx') as writer:
+    df1_filtered.to_excel(writer, sheet_name='Sheet1_filtered', index=False)
+    df2_filtered.to_excel(writer, sheet_name='Sheet2_filtered', index=False)
+    df_differences.to_excel(writer, sheet_name='Sheet_QA', index=False)
 
+print("Differences have een highlighted in the 'QA.xlsx' sheet")
