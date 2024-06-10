@@ -43,20 +43,20 @@ common_columns = df1.columns.intersection(df2.columns)
 
 # Filter the DataFrames to include only the common columns
 df1_filtered = df1[common_columns]
-df1_filtered = df2[common_columns]
+df2_filtered = df2[common_columns]
 
 
 # Display the common columns
-
+print('Common columns:', common_columns.to_list())
 
 
 # Compare the filtered DataFrames and highlight differences
-
+comparison_values = df1_filtered.values == df2_filtered.values
 
 
 
 # Create a DataFrame to store differences
-
+df_differences = pd.DataFrame(np.where(comparison_values, np.nan, 'Difference'), index=df1_filtered.index, columns=df1_filtered.columns)
 
 
 # Save the differences to a new Excel file
