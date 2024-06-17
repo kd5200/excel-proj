@@ -42,7 +42,7 @@ print('Initial colmns in second sheet:', df2.columns.tolist())
 
 # Specify the columns to be deleted from the first sheet
 # Set time aside to see which columns aren't needed on the dcm export excel sheet
-columns_to_remove = ['columns to be deleted']
+columns_to_remove = ['Site ID', 'Placement Compatibility', 'Placement Group Type', 'Placement Group ID', 'Primary Placement', 'Payment Source', 'Placement Orientation', 'Placement Duration', 'Placement Publisher Specification', 'Placement Tag Wrapping', 'Placement Tag Wrapping Type', 'Placement Tag Wrapping Measurement Mode', 'Cost Structure', 'Units', 'Rate', 'Cost', 'Opt This Placement Out of Ad Blocking', 'Placement Comments', 'Content Category', 'Placement Strategy', 'Assignment is Active', 'Ad ID', 'Ad Uses Default Landing Page', 'Ad Landing Page ID', 'Ad Landing Page Name', 'Ad Click-Through URL', 'Applied Impression Event Tag IDs']
 
 
 
