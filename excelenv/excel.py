@@ -3,8 +3,8 @@ import numpy as np
 
 
 # Load the Excel files
-file_1 = 'initial-file-path'
-file_2 = 'file-path-of-dcm-export'
+file_1 = r'DCM-file-path' 
+file_2 = r't-sheet-file-path'
 
 
 
@@ -35,14 +35,14 @@ df2 = pd.read_excel(file_2, sheet_name='Sheet2')
 
 # Display the initial columns
 
-print('Initial colmns in first sheet:', df1.columns.tolist())
-print('Initial colmns in second sheet:', df2.columns.tolist())
+# print('Initial colmns in first sheet:', df1.columns.tolist())
+# print('Initial colmns in second sheet:', df2.columns.tolist())
 
 
 
 # Specify the columns to be deleted from the first sheet
 # Set time aside to see which columns aren't needed on the dcm export excel sheet
-columns_to_remove = ['Site ID', 'Placement Compatibility', 'Placement Group Type', 'Placement Group ID', 'Primary Placement', 'Payment Source', 'Placement Orientation', 'Placement Duration', 'Placement Publisher Specification', 'Placement Tag Wrapping', 'Placement Tag Wrapping Type', 'Placement Tag Wrapping Measurement Mode', 'Cost Structure', 'Units', 'Rate', 'Cost', 'Opt This Placement Out of Ad Blocking', 'Placement Comments', 'Content Category', 'Placement Strategy', 'Assignment is Active', 'Ad ID', 'Ad Uses Default Landing Page', 'Ad Landing Page ID', 'Ad Landing Page Name', 'Ad Click-Through URL', 'Applied Impression Event Tag IDs', 'Priority', 'Hard Cut-Off', 'Impression Ration', 'Rotation Type', 'Weight Calculation Strategy', 'Rotation Value', 'Audience Segment Group Name', 'Audience Segment Name', 'Creative ID', 'Creative Compatibility', 'Creative Assignment Event Tags Enabled', 'Creative Uses Default Landing Page', 'Creative Landing Page ID' ]
+columns_to_remove = ['Error Message','Site ID', 'Placement Compatibility', 'Placement Group Type', 'Placement Group ID', 'Primary Placement', 'Payment Source', 'Placement Orientation', 'Placement Duration', 'Placement Publisher Specification', 'Placement Tag Wrapping', 'Placement Tag Wrapping Type', 'Placement Tag Wrapping Measurement Mode', 'Cost Structure', 'Units', 'Rate', 'Cost', 'Opt This Placement Out of Ad Blocking', 'Placement Comments', 'Content Category', 'Placement Strategy', 'Assignment is Active', 'Ad ID', 'Ad Uses Default Landing Page', 'Ad Landing Page ID', 'Ad Landing Page Name', 'Ad Click-Through URL', 'Applied Impression Event Tag IDs', 'Priority', 'Hard Cut-Off', 'Impression Ration', 'Rotation Type', 'Weight Calculation Strategy', 'Rotation Value', 'Audience Segment Group Name', 'Audience Segment Name', 'Creative ID', 'Creative Compatibility', 'Creative Assignment Event Tags Enabled', 'Creative Uses Default Landing Page', 'Creative Landing Page ID' ]
 
 
 
